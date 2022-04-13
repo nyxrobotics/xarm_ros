@@ -55,7 +55,7 @@
     </gazebo>
 
     <gazebo reference="${prefix}left_outer_knuckle">
-      <selfCollide>false</selfCollide>
+      <selfCollide>true</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}left_finger">
@@ -67,7 +67,7 @@
     </gazebo>
 
     <gazebo reference="${prefix}right_outer_knuckle">
-      <selfCollide>false</selfCollide>
+      <selfCollide>true</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}right_finger">
