@@ -104,16 +104,10 @@
       <pose>0 -0.015 0.015 0 0 0</pose>
       <axis>
         <xyz>1 0 0</xyz>
-        <use_parent_model_frame>true</use_parent_model_frame>
       </axis>
       <physics>
         <ode>
           <implicit_spring_damper>1</implicit_spring_damper>
-          <cfm_damping>0</cfm_damping>
-          <limit>
-            <cfm>1e-7</cfm>
-            <erp>0.8</erp>
-          </limit>
         </ode>
       </physics>
     </joint>
@@ -228,14 +222,6 @@
         <color rgba="0.753 0.753 0.753 1.0"/>
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0.016 0.02"
-        rpy="-0.7 0 0" />
-      <geometry>
-        <box size="0.027 0.012 0.061"/>
-      </geometry>
-    </collision>
   </link>
   <joint
     name="${prefix}left_inner_knuckle_joint"
@@ -308,16 +294,10 @@
       <pose>0 0.015 0.015 0 0 0</pose>
       <axis>
         <xyz>1 0 0</xyz>
-        <use_parent_model_frame>true</use_parent_model_frame>
       </axis>
       <physics>
         <ode>
           <implicit_spring_damper>1</implicit_spring_damper>
-          <cfm_damping>0</cfm_damping>
-          <limit>
-            <cfm>1e-7</cfm>
-            <erp>0.8</erp>
-          </limit>
         </ode>
       </physics>
     </joint>
@@ -433,14 +413,6 @@
         <color rgba="0.753 0.753 0.753 1.0"/>
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 -0.016 0.02"
-        rpy="0.7 0 0" />
-      <geometry>
-        <box size="0.027 0.012 0.061"/>
-      </geometry>
-    </collision>
   </link>
   <joint
     name="${prefix}right_inner_knuckle_joint"
