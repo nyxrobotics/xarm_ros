@@ -89,7 +89,29 @@
         <box size="0.012 0.069 0.033"/>
       </geometry>
     </collision>
+    <collision>
+      <geometry>
+        <mesh
+          scale="0.02 0.07 0.07"
+          filename="package://xarm_gripper/meshes/simple_gear_for_gripper.stl" />
+      </geometry>
+    </collision>
   </link>
+  <gazebo>
+    <joint name="${prefix}left_loop_joint" type="revolute">
+      <parent>${prefix}left_inner_knuckle</parent>
+      <child>${prefix}left_finger</child>
+      <pose>0 -0.015 0.015 0 0 0</pose>
+      <axis>
+        <xyz>1 0 0</xyz>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+  </gazebo>
   <joint
     name="${prefix}drive_joint"
     type="revolute">
@@ -200,14 +222,6 @@
         <color rgba="0.753 0.753 0.753 1.0"/>
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0.016 0.02"
-        rpy="-0.7 0 0" />
-      <geometry>
-        <box size="0.027 0.012 0.061"/>
-      </geometry>
-    </collision>
   </link>
   <joint
     name="${prefix}left_inner_knuckle_joint"
@@ -264,7 +278,30 @@
         <box size="0.012 0.069 0.033"/>
       </geometry>
     </collision>
+    <collision>
+      <geometry>
+        <mesh
+          scale="0.02 0.07 0.07"
+          filename="package://xarm_gripper/meshes/simple_gear_for_gripper.stl" />
+      </geometry>
+    </collision>
   </link>
+
+  <gazebo>
+    <joint name="${prefix}right_loop_joint" type="revolute">
+      <parent>${prefix}right_inner_knuckle</parent>
+      <child>${prefix}right_finger</child>
+      <pose>0 0.015 0.015 0 0 0</pose>
+      <axis>
+        <xyz>1 0 0</xyz>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+  </gazebo>
   <joint
     name="${prefix}right_outer_knuckle_joint"
     type="revolute">
@@ -376,14 +413,6 @@
         <color rgba="0.753 0.753 0.753 1.0"/>
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 -0.016 0.02"
-        rpy="0.7 0 0" />
-      <geometry>
-        <box size="0.027 0.012 0.061"/>
-      </geometry>
-    </collision>
   </link>
   <joint
     name="${prefix}right_inner_knuckle_joint"
